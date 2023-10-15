@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://kit.fontawesome.com/a94718a00b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="container">
+      <form class="form" id="form">
+        <div class="form__control">
+
+          <div class="name-inputs">
+            <!-- First name -->
+            <div class="first-name">
+                <label>First Name</label>
+                <input type="text" placeholder="ex: John" id="firstname" />
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="last-name">
+                <!-- Last name -->
+                <label>Last Name</label>
+                <input type="text" placeholder="ex: Doe" id="lastname" />
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="form__control">
+          <label>Email Address</label>
+          <input type="email" placeholder="ex: johndoe@exemple.com" id="email" />
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form__control">
+          <label>Message</label>
+          <textarea placeholder="write your message..." id="textarea"></textarea>
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <button>Send Message</button>
+      </form>
+    </div>
+
+    <div id="display-toaster">
+            <div class="toast-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+             
+             <div class="toast-details">
+
+             <div class="toast-title">
+             Success
+             </div>
+             <div class="toast-message">
+             Message has been sent!
+             </div>
+             </div>
+            <div class="cross-icon-div">
+                <div id="remove-toast" class="cross-icon">
+                    <i class="fa-solid fa-xmark" ></i>
+
+                </div>
+
+            </div>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

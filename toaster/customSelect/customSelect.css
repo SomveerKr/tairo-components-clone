@@ -1,0 +1,59 @@
+
+.select-menu{
+    width: 210px;
+}
+.select-menu .select-btn{
+    display: flex;
+    background: #131B2E;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+
+    border:1px solid #313e56;
+    border-radius: 6px;
+    outline-color: transparent;
+    outline-offset: 2px;
+    outline-style: dashed;
+    outline-width: 1px;
+    width: 210px;
+    
+}
+
+.select-menu .select-btn:focus{
+    outline-color: #344258;
+}
+.select-btn i{
+    /* font-size: 14px; */
+    transition: 0.3s;
+    color: #8a96ac;
+}
+.select-menu.active .select-btn i{
+    transform: rotate(-180deg);
+}
+.select-menu .options{
+    position: fixed;
+    border-radius: 0 0 4px 4px;
+    background: #4b515f;
+    color: #e3e6ea;
+    display: none;
+    border: 1px solid #4f526a;
+    width: 210px;
+}
+.select-menu.active .options{
+    display: block;
+}
+.options .option{
+    display: flex;
+    cursor: pointer;
+    padding: 2px 14px;
+    align-items: center;
+    
+}
+.options .option:hover{
+    background: #99c8ff;
+    color: #182435;
+
+}

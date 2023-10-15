@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #1E293B;
+}
+
+.container {
+  background-color: #1E293B;
+  color: #76849C;
+  border: 1px solid #344258;
+  border-radius: 5px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); */
+  width: 500px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+
+
+.form {
+  padding: 30px 20px;
+}
+
+.form__control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.name-inputs{
+    display: flex;
+    gap: 20px;
+}
+.first-name, .last-name{
+    width: 50%;
+}
+.form__control label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.form__control input, .form__control textarea{
+  border: 1px solid #344258;
+  border-radius: 6px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px 12px;
+  outline:none;
+  background: #131B2E;
+  color: #fff;
+  outline-color: transparent;
+  outline-offset: 2px;
+  outline-style: dashed;
+  outline-width: 1px;
+}
+.form__control input:focus, .form__control textarea:focus{
+    outline-color: #344258;
+}
+.name-inputs  .form__control.success, .name-inputs .form__control.error{
+    width: 50%;
+}
+.form__control.success input, .form__control.success textarea{
+  border-color: #2ecc71;
+}
+
+.form__control.error input, .form__control.error textarea{
+  border-color: #e74c3c;
+}
+
+.form__control i {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.form__control.success i.fa-check-circle {
+  visibility: visible;
+  color: #2ecc71;
+}
+
+.form__control.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+.form__control small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.form__control.error small {
+  color: #e74c3c;
+  visibility: visible;
+  font-size: 12px
+}
+
+.form button {
+  background-color: #8B5CF6;
+  border: 2px solid #8B5CF6;
+  border-radius: 4px;
+  color: #eee;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+/* Success message toaster */
+#display-toaster{
+    bottom:-100px;
+    position: fixed;
+    display: flex;
+    /* padding: 10px 20px; */
+    gap: 10px;
+    border-radius: 10px;
+margin-left: 20px;
+background: #1e293b;
+color: #fff;
+border: 1px solid #34435a;
+}
+.toast-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* color: #fff; */
+    background: #0f766e;
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+    
+}
+.toast-details{
+    padding: 10px;
+    color: #76849C;
+    
+}
+.toast-title{
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #fff;
+}
+.cross-icon-div{
+    padding: 10px 10px 0 0;
+}
+.cross-icon{
+    padding: 3px 7px;
+    border-radius: 50%;
+    color: #76849C;
+}
+.cross-icon:hover{
+    background: #455166;
+    cursor: pointer;
+}
+
+/* toast */
+@keyframes show_toast {
+    from {
+      bottom: -10px;
+      opacity: 0.5;
+    }
+    to {
+      bottom: 40px; /* final position above the bottom */
+      opacity: 1;
+    }
+  }
+
+  
+  /* CSS code for applying the animation to the display-toaster element */
+  .toast-show {
+    animation: show_toast 0.3s ease forwards; 
+  }
