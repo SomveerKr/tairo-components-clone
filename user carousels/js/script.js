@@ -11,17 +11,17 @@ var swiper = new Swiper(".swiper", {
     prevEl: "#carousel-btn-prev",
   },
 
-  // breakpoints:{
-  //     0: {
-  //         slidesPerView: 1,
-  //     },
-  //     520: {
-  //         slidesPerView: 2,
-  //     },
-  //     950: {
-  //         slidesPerView: 3,
-  //     },
-  // },
+  breakpoints:{
+      0: {
+          slidesPerView: 1,
+      },
+      600: {
+          slidesPerView: 2,
+      },
+      950: {
+          slidesPerView: 3,
+      },
+  },
 });
 
 

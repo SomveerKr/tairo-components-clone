@@ -133,7 +133,9 @@ const createToast = () => {
   // Getting the icon and text for the toast based on the id passed
   const { icon, title, message, color, toastClassForProgress } = updateToastDetails();
   const toast = document.createElement('div'); // Creating a new 'li' element for the toast
+  toast.id="toast";
   toast.className = `toast ${toastClassForProgress}`; // Setting the classes for the toast
+  
   // Setting the inner HTML for the toast
   toast.innerHTML = `
                         <div style="background:${color}" class="toast-icon">
@@ -167,8 +169,26 @@ const createToast = () => {
 };
 
 // Adding a click event listener to each button to create a toast when clicked
+showToasterBtn.addEventListener('click', () => {
+  if (document.getElementById("toast") === null){
+    return createToast()
+  } else {
+    // Define a function that checks the condition and increments x
+function checkCondition() {
+  // If x is equal to 10, clear the interval and return
+  if (document.getElementById("toast") === null) {
+    
+    clearInterval(interval);
+    return createToast();
+  }
+  console.log(document.getElementById("toast"));
+}
 
-showToasterBtn.addEventListener('click', () => createToast());
+// Set an interval that calls the checkCondition function every one second
+var interval = setInterval(checkCondition, 2000);
+  }
+  
+});
 
 
 
