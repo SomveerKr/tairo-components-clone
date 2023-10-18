@@ -9,7 +9,7 @@
   }
   
   .main {
-    width: 50%;
+    width: 30%;
     margin: 14% auto;
     position: relative;
   }
@@ -25,48 +25,49 @@
   /* Design slider button */
   #slider::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 48px;
-    height: 48px;
+    width: 20px;
+    height: 20px;
     cursor: grab;
     position: relative;
     z-index: 3;
   }
   
   #selector {
-    height: 95px;
-    width: 48px;
+    height: 75px;
+    width: 43px;
     position: absolute;
     bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .selectBtn {
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     background: #fff;
-
-    /* background-size: cover;
-    background-position: center; */
     border-radius: 50%;
     position: absolute;
-    bottom: 10px;
-    border: 2px solid #8B5CF6;;
+    bottom: 16px;
+    border: 1px solid #8B5CF6;;
   }
   #selectValue {
-    width: 52px;
-    height: 36px;
+    height: 30px;
+    min-width: 20px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     position: absolute;
-    top: 5px;
-    right: 4px;
+    top: 0;
+    right: 0;
     background: #8B5CF6;
-    border-radius: 15px;
+    border-radius: 14px;
     text-align: center;
-    /* line-height: 45px; */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     color: #fff;
   }
