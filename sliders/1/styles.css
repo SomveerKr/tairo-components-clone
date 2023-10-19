@@ -21,6 +21,10 @@
     border-radius: 3px;
     background: #475569;
   }
+  /* .dragging {
+    cursor: grab;
+  } */
+  
   
   /* Design slider button */
   #slider::-webkit-slider-thumb {
@@ -56,7 +60,7 @@
     bottom: 16px;
     border: 1px solid #8B5CF6;;
   }
-  #selectValue {
+  #slider-tooltip {
    
     height: 30px;
     min-width: 20px;
@@ -67,16 +71,17 @@
     right: 0;
     background: #8B5CF6;
     /* border-radius: 4px; */
-
+    cursor: grab;
     font-size: 15px;
     font-weight: bold;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: grab;
     
   }
-  #selectValue::after {
+  #slider-tooltip::after {
     /* color: #fff;
     content: '';
     border-top: 10px solid #8B5CF6;

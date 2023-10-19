@@ -17,8 +17,8 @@
   
   .double_range_slider_box {
 	position: relative;
-	width: 70%;
-	max-width: 700px;
+	width: 50%;
+	max-width: 500px;
 	background: transparent;
 	display: flex;
 	justify-content: center;
@@ -28,7 +28,7 @@
   
   .double_range_slider {
 	width: 90%;
-	height: 10px;
+	height: 7px;
 	position: relative;
 	background-color: #475569;
 	border-radius: 20px;
@@ -52,10 +52,10 @@
 	transform: translateY(-50%);
   }
   input::-webkit-slider-thumb {
-	height: 35px;
-	width: 35px;
+	height: 20px;
+	width: 20px;
 	border-radius: 50%;
-	border: 2px solid #8B5CF6;
+	border: 1x solid #8B5CF6;
 	background-color: #fff;
 	pointer-events: auto;
 	-webkit-appearance: none;
@@ -63,10 +63,10 @@
 	margin-bottom: 1px;
   }
   input::-moz-range-thumb {
-	height: 18px;
-	width: 18px;
+	height: 20px;
+	width: 20px;
 	border-radius: 50%;
-	border: 2px solid #8B5CF6;
+	border: 1px solid #8B5CF6;
 	background-color: #fff;
 	pointer-events: auto;
 	-moz-appearance: none;
@@ -77,20 +77,22 @@
   .minvalue {
 	position: absolute;
 	/* padding: 12px 17px; */
+	cursor: grab;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 45px;
-	height: 44px;
+	width: 37px;
+	height: 36px;
 	background: #8B5CF6;
 	border-radius: 3rem;
 	color: #fff;
-	bottom: -4px;
+	bottom: -12px;
 	transform: translate(0, -100%);
 	left: 0;
-	font-size: 1rem;
-	transition: left 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-	will-change: left, transform;
+	font-size: 15px;
+	/* font-weight: bold; */
+	/* transition: left 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	will-change: left, transform; */
   }
   .minvalue::after{
 	border: 7px solid transparent;
@@ -105,20 +107,22 @@
   }
   .maxvalue {
 	position: absolute;
+	cursor: grab;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 45px;
-	height: 44px;
+	width: 37px;
+	height: 36px;
 	background: #8B5CF6;
 	border-radius: 3rem;
 	color: #fff;
-	bottom: 84px;
+	bottom: 60px;
 	transform: translate(0, 100%);
 	right: 0;
-	font-size: 1rem;
-	transition: right 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-	will-change: right, transform;
+	font-size: 15px;
+	/* font-weight: bold; */
+	/* transition: right 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	will-change: right, transform; */
   }
   .maxvalue::after{
 	border: 7px solid transparent;

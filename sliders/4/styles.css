@@ -53,7 +53,7 @@
     bottom: 16px;
     border: 1px solid #8B5CF6;;
   }
-  #selectValue {
+  #slider-tooltip {
     height: 35px;
     min-width: 28px;
     padding-left: 0.3rem;
@@ -70,8 +70,9 @@
     font-size: 15px;
     font-weight: bold;
     color: #fff;
+    cursor: grab;
   }
-  #selectValue::after {
+  #slider-tooltip::after {
     border: 7px solid transparent;
     border-top-color: inherit;
     bottom: -12px;
